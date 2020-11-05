@@ -18,8 +18,8 @@ class ArcLoss(SoftmaxCrossEntropyLoss):
     def hybrid_forward(self, F, pred, label, sample_weight=None, *args, **kwargs):
     
         ```
-        pred:(B,num_classes)
-        label:(B,) 其值的取值范围为（0，num_classes]
+        # pred:(B,num_classes)
+        # label:(B,) 其值的取值范围为（0，num_classes]
         ```
        
         
