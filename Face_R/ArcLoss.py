@@ -24,9 +24,9 @@ class ArcLoss(SoftmaxCrossEntropyLoss):
        
         
         ```
-        这一部分，根据label挑选出来gt_pred,并将gt_pred中小于0的用zy_keep代替，这个操作通过F.where操作完成。
-        这个cond/cond_v中的各个值来自于cos_t,cos_t中大于0的呢还是其本身，小于0的变为0，这样，在F.where中，
-        若cond中的值大于0，则还为new_zy,否则为zy_keep.
+        # 这一部分，根据label挑选出来gt_pred,并将gt_pred中小于0的用zy_keep代替，这个操作通过F.where操作完成。
+        # 这个cond/cond_v中的各个值来自于cos_t,cos_t中大于0的呢还是其本身，小于0的变为0，这样，在F.where中，
+        # 若cond中的值大于0，则还为new_zy,否则为zy_keep.
         ```
         cos_t = F.pick(pred, label, axis=1)  # cos(theta_yi)  shape:(B,)
         if self.easy_margin:
@@ -43,9 +43,9 @@ class ArcLoss(SoftmaxCrossEntropyLoss):
         new_zy = F.where(cond, new_zy, zy_keep)
         
         ```
-        这一部分，算出来new_zy 大于 cos_t的那部分，并将其加到原来pred对应的位置上。主要通过以下几个函数实现：
-        ① F.expand_dims()         在diff的第一维度上扩展一下（维度从0开始）
-        ② F.one_hot()             返回一个shape为（B,depth）one_hot,其中label中对应值所标识的位置为on_value,为表示的位置为off_value
+        # 这一部分，算出来new_zy 大于 cos_t的那部分，并将其加到原来pred对应的位置上。主要通过以下几个函数实现：
+        # ① F.expand_dims()         在diff的第一维度上扩展一下（维度从0开始）
+        # ② F.one_hot()             返回一个shape为（B,depth）one_hot,其中label中对应值所标识的位置为on_value,为表示的位置为off_value
         
         ```
         diff = new_zy - cos_t  # cos(theta_yi + m) - cos(theta_yi)
