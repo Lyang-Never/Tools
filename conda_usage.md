@@ -19,3 +19,5 @@
 ## 退出：
           linux/osx:source deactivate py3
           windows: deactivate py3
+          
+          conda4: conda deavtivate py3
