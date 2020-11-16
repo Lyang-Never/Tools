@@ -33,3 +33,10 @@ Ctrl+shift+p 快捷键
 }
 
 ```
+## n、
+```
+1 mxnet gpu 环境搭建  python 环境配置
+2 vscode 配置安装
+3 xshell raidrive 
+4 windows 10 重装
+```
