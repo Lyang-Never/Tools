@@ -18,3 +18,18 @@ pip install -i https://pypi.tuna.tsinghua.edu.cn/simple some-package
 pip install -i https://pypi.tuna.tsinghua.edu.cn/simple pip -U
 ```
 
+## 2、vscode settings.json
+Ctrl+shift+p 快捷键
+```
+
+{
+    "workbench.iconTheme": "material-icon-theme",
+    "workbench.colorTheme": "Atom One Dark",
+    "editor.quickSuggestions": {
+        "other": true,
+        "comments": true,
+        "strings": true
+      }
+}
+
+```
