@@ -41,5 +41,5 @@
 
 ### 查看文件大小
 ```
-du -lh max-depth=1
+du -lh --max-depth=1
 ```
