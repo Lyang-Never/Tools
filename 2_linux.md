@@ -37,3 +37,9 @@
   tar -cvfz archive.tar.gz dir1 
 
 ```
+
+
+### 查看文件大小
+```
+du -lh max-depth=1
+```
