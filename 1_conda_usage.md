@@ -32,7 +32,7 @@
           conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/
           conda config --set show_channel_urls yes
           
-          可以通过 vim ~/.condarc 查看（linux下）
+          可以通过 vim ~/.condarc 查看（linux下）或者  conda config --show
           然后通过torch官网命令：
           eg：conda install pytorch==1.6.0 torchvision==0.7.0 cudatoolkit=10.1   （去掉 -c pytorch）
           
