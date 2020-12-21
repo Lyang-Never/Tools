@@ -21,3 +21,24 @@
           windows: deactivate py3
           
           conda4: conda deavtivate py3
+## 镜像&问题&解决：
+          ### 添加镜像：
+          conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/conda-forge/
+          conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/msys2/
+          conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/bioconda/
+          conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/menpo/
+          conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/pytorch/
+          conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/
+          conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/
+          conda config --set show_channel_urls yes
+          
+          可以通过 vim ~/.condarc 查看（linux下）
+          然后通过torch官网命令：
+          eg：conda install pytorch==1.6.0 torchvision==0.7.0 cudatoolkit=10.1   （去掉 -c pytorch）
+          
+          清华开源软件镜像地址：https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/linux-64/
+          必须保证在这个镜像里面找到 相应版本的cudatoolkit 和 pytorch   （现在似乎只支持到torch）
+          
+          ### 问题&解决：
+          Conda - Downloaded bytes did not match Content-Length 问题  conda config --set remote_read_timeout_secs 600.0 解决   （似乎没作用）
+          
