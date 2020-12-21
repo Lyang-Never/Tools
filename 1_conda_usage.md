@@ -38,7 +38,8 @@
           
           清华开源软件镜像地址：https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/linux-64/
           必须保证在这个镜像里面找到 相应版本的cudatoolkit 和 pytorch   （现在似乎只支持到torch1.5）
+          （装其他版本可以试着把 https 换成 http ，试验了下似乎可以成功。）
           
           问题&解决：
-          Conda - Downloaded bytes did not match Content-Length 问题  conda config --set remote_read_timeout_secs 600.0 解决   （似乎没作用）
+          Conda - Downloaded bytes did not match Content-Length 问题  conda config --set remote_read_timeout_secs 600.0 解决   
           
