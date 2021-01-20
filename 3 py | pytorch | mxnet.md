@@ -6,6 +6,8 @@
 ## 2 cv2 和 plt
   ```python
   resize: 
+  cv2.putText(img, text, org, fontFace, fontScale, color[, thickness[, lineType[, bottomLeftOrigin]]])
+  cv.putText(img, text, (40,60), cv2.FONT_HERSHEY_COMPLEX, 1, (0,0,255), 1, 4)
   
   plt.show(numpy格式)
   
