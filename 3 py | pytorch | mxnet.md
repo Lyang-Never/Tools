@@ -4,32 +4,37 @@
 
 
 ## 2 cv2 和 plt
-
+  ```python
+  resize: 
+  
+  plt.show(numpy格式)
+  
+  ```
 
 ## 3 常用的操作
 
-``
-  random.sample(list,len)   从list中随机取固定长度的list1
-
+```python
+  random.sample(list,len)    #从list中随机取固定长度的list1
+```
 
 
 ## 4 img读取操作
 
 ```python
  <1> img = cv2.imread('test.jpg')
-     BGR,.shape得到（H,W,C） np.ndarray
+     # BGR,.shape得到（H,W,C） np.ndarray
  <2> from PIL import Image
      Image = Image.open('test.jpg')
-     RGB, .size 得到(w,h)
+     # RGB, .size 得到(w,h)
  <3> import mxnet as mx
      mx_img = mx.image.imread('test.jpg')   # args：同下
-     RGB, .shape(H,W,C)
+     # RGB, .shape(H,W,C)
      
      img = mx.image.imdecode(open('test.jpg','rb').read())   # 数据流方式   args:flag = 1 / 0 (3channels/gray),to_rgb = 1 / 0 (RGB/BGR)
      
-     cv2 -> Image
+     # cv2 -> Image
      image1 = Image.fromarray(cv2.cvtColor(img,cv2.COLOR_BGR2RGB))   # array
-     Image -> cv2
+     # Image -> cv2
      img1 = cv2.cvtColor(np.array(image),cv2.COLOR_RGB2BGR)    # RGB2BGR
      
      
