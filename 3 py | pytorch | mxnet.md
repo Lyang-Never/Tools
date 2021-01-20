@@ -2,6 +2,23 @@
 
 ## 1 xml文件处理和json文件处理
 
+```python
+# xml
+import xml.etree.ElementTree as ET
+    root = ET.parse(anno_path).getroot()
+    size = root.find('size')
+    width = float(size.find('width').text)
+    height = float(size.find('height').text)
+    for obj in root.iter('object'):
+        xml_box = obj.find('bndbox')
+        xmin = (float(xml_box.find('xmin').text) - 1)
+        ymin = (float(xml_box.find('ymin').text) - 1)
+        xmax = (float(xml_box.find('xmax').text) - 1)
+        ymax = (float(xml_box.find('ymax').text) - 1)
+        
+# json
+
+```
 
 ## 2 cv2 和 plt
   ```python
