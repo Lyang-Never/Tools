@@ -1,3 +1,22 @@
+# Py
+
+## xml文件处理和json文件处理
+
+
+## cv2 和 plt
+
+
+## 常用的操作
+
+``
+  random.sample(list,len)   从list中随机取固定长度的list1
+
+
+
+## img读取操作
+
+
+
 ## 二进制操作img
 ```
 img_path = 'xx.jpg'
@@ -19,3 +38,14 @@ with open('xx.bin','rb') as f:
   _b = pickle.load(f,encoding='iso-8859-1')
 
 ```
+
+# Pytorch
+
+
+
+
+# Mxnet
+
+## rec文件处理（读 写）
+
+
