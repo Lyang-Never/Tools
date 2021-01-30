@@ -23,5 +23,10 @@ RGBImg=cv2.cvtColor(img,cv2.COLOR_BGR2RGB)
 image=QtGui.QImage(RGBImg,RGBImg.shape[1],RGBImg.shape[0],QtGui.QImage.FormatRGB888)
  
 image = QtGui.QPixmap(image).scaled(400, 400)
-pic_show_label.setPixmap(image
+pic_show_label.setPixmap(image)
+```
+## QT designer 转化为代码
+```
+QT designer所在位置：F:\python3.6.5\Lib\site-packages\qt5_applications\Qt\bin 
+pyuic5 -o ui_test.py test.ui -x
 ```
