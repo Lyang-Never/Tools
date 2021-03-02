@@ -82,6 +82,41 @@ with open('xx.bin','rb') as f:
 
 ```
 
+## 7 绘制间隔中心点
+```
+
+import numpy as np
+import cv2
+
+h,w = 200,200
+img = np.random.randint(0,1,(h,w,3),dtype=np.int8)
+cv2.imwrite('raw.jpg',img)
+
+stride = [8,10,20]
+sml_size = [(h/item,w/item) for item in stride]
+colors = [(0,0,255),(0,255,0),(255,0,0),(255,255,0),(0,255,255),(255,0,255)]
+
+for i,item in enumerate(stride):
+    _h,_w = sml_size[i]
+    shifts_x = np.arange(0,_w*item,_w,dtype=np.float32)
+    shifts_y = np.arange(0,_h*item,_h,dtype=np.float32)
+
+    shift_y,shift_x = np.meshgrid(shifts_y,shifts_x)
+    shift_y = shift_y.reshape(-1)
+    shift_x = shift_x.reshape(-1)
+    coords = np.stack([shift_x,shift_y],-1)
+    coords_center = coords + item//2
+    for num in range(coords.shape[0]):
+        cv2.circle(img,tuple(coords[num]),2,colors[i],-1)
+        cv2.circle(img,tuple(coords_center[num]),1,colors[i+3],-1)
+    cv2.imwrite('stride_%d.jpg'%(i),img)
+cv2.imwrite('handle.jpg',img)
+
+
+🔺cv2.circle(args) 中 center可以是float,但必须是tuple，list不行
+🔺 np.arange，np.meshgrid， np.stack
+```
+
 # Pytorch :snowman:
 
 
