@@ -83,3 +83,7 @@ self.std=[0.28863828, 0.27408164, 0.27809835]
 
 
 ```
+
+## COCO VOC数据格式
+![image](https://user-images.githubusercontent.com/56187355/111309286-aec08100-8696-11eb-9e42-b647674b595b.png)
+![image](https://user-images.githubusercontent.com/56187355/111309316-b97b1600-8696-11eb-94c1-97422c9fef23.png)
