@@ -18,6 +18,10 @@ import xml.etree.ElementTree as ET
         
 # json
 
+ dumps将一个字典转换成json
+ dump 将一个文件转换成json
+ loads 读取sring 转化成字典
+ load 读取filename转化成字典
 ```
 
 ## 2 cv2 和 plt
