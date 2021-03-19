@@ -22,6 +22,10 @@ import xml.etree.ElementTree as ET
  dump 将一个文件转换成json
  loads 读取sring 转化成字典
  load 读取filename转化成字典
+ 
+ with open(osp.join(save_path,'train.json'),'w') as f:
+    json_str = json.dumps(coco_json,indent=1)
+    f.write(json_str)
 ```
 
 ## 2 cv2 和 plt
