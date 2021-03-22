@@ -32,7 +32,10 @@ import xml.etree.ElementTree as ET
   ```python
   resize: 
   cv2.putText(img, text, org, fontFace, fontScale, color[, thickness[, lineType[, bottomLeftOrigin]]])
-  cv.putText(img, text, (40,60), cv2.FONT_HERSHEY_COMPLEX, 1, (0,0,255), 1, 4)
+  cv2.putText(img, text, (40,60), cv2.FONT_HERSHEY_COMPLEX, 1, (0,0,255), 1, 4)
+  
+  cv2.rectangle(img, (240, 0), (480, 375), (0, 255, 0), 2)   # pt1和pt2需是int
+  
   
   plt.show(numpy格式)
   
