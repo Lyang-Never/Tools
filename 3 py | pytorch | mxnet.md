@@ -39,6 +39,19 @@ import xml.etree.ElementTree as ET
   
   plt.show(numpy格式)
   
+  
+  
+  # cv2 处理视频流
+  '''
+  保存avi视频流
+  
+  '''
+  import cv2
+  fourcc = cv2.VideoWriter_fourcc(*'XVID')
+  out = cv2.VideoWriter('output.avi',fourcc,20.0,(640,400))   # width,height
+  out.write(frame) #frame是单帧的img
+  
+  
   ```
 
 ## 3 常用的操作
