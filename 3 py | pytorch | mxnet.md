@@ -52,6 +52,9 @@ import xml.etree.ElementTree as ET
   out.write(frame) #frame是单帧的img
   
   
+  frame_width = video.get(3)  / video.get(cv2.CAP_PROP_FRAME_WIDTH)
+  frame_height = video.get(4) / video.get(cv2.CAP_PROP_FRAME_HEIGHT)
+   = video.get(7) /  video.get(cv2.CV_CAP_PROP_FRAME_COUNT)
   ```
 
 ## 3 常用的操作
